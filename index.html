@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KingStarMedia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;background-image: url('images/Camera.jpg');background-repeat: no-repeat;
+      background-size:cover;
+      background-attachment: fixed;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 20px;
+      margin: 0px;
+      background-color: white;
+    }
+    .gallery img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+    @media (min-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+      header{
+        font-size: 290%;text-align: center;background-color: white; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        padding-left: 20px;
+        padding-right: 20px;
+        }
+    p{
+        font-size: 80%;
+    }
+    i{
+        color: turquoise;
+    }
+    img {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  
+}
+
+@media (min-width: 768px) {
+  img {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  img {
+    width: 30%;
+  }
+}
+  #image{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  
+  }
+
+  .nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  
+}
+
+.nav li {
+  margin: 0 5%;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 5%;
+  display: block;
+}
+footer{height: 50vh;
+}
+#footer{
+  height: 100px;background-color: black; color: blanchedalmond;padding: 1%;
+}
+p{}
+
+
+  </style>
+</head>
+<header>
+    King Star Media Production<p><i>Frozen Moments</i></p>
+</header>
+<div>
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+  </nav>
+  
+</div>
+<div id="image">
+    <img src="images/logo.jpeg">
+</div>
+
+<body>
+  <div class="gallery">
+    <img src="images/Camera.jpg" alt="Image 1" onclick="openLightbox(this)">
+    <img src="images/image1.png" alt="Image 2" onclick="openLightbox(this)">
+    <img src="images/image2.png" alt="Image 3" onclick="openLightbox(this)">
+    <img src="images/image3.jpeg" alt="Image 4" onclick="openLightbox(this)">
+    <img src="images/image4.jpeg" alt="Image 5" onclick="openLightbox(this)">
+    <img src="images/image5.jpeg" alt="Image 6" onclick="openLightbox(this)">
+    <img src="images/Image6.jpeg" alt="Image 7" onclick="openLightbox(this)">
+    <!-- Add more images -->
+  </div>
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+  </div>
+
+  <script>
+    function openLightbox(img) {
+      document.getElementById('lightbox').style.display = 'flex';
+      document.getElementById('lightbox-img').src = img.src;
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+  <footer>
+    
+
+  </footer>
+  <div id="footer"><p>Contact<br><p>Call/Whatsapp:0660772270</p><p>Email:nabaa@gmail.com</p></div>
+</body>
+</html>
